@@ -133,7 +133,7 @@ public class ProductsManager : IProductsManager
         newProduct.Sale = product.Sale;
         newProduct.Description = product.Description;
         newProduct.Quantity = product.Quantity;
-        newProduct.ImgURL = product.ImgURL;
+        newProduct.ImgURL = product.ImgURL == null ? newProduct.ImgURL: product.ImgURL;
         newProduct.CategoryId = product.CategoryId;
         _productsRepo.SaveChanges();
     }
